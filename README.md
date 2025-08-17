@@ -24,7 +24,7 @@ Aşağıdaki komut ile D455 kamera sürücüsü çalıştırılır.
 ```bash
 ros2 launch realsense2_camera rs_launch.py camera_name:=d455
 veya
-ros2 launch realsense2_camera rs_d455_pointcloud_launch.py camera_name:=d455
+ros2 launch realsense2_camera rs_d455_pointcloud_launch.py 
 ```
 
 Bu komut ile aşağıdaki topic’ler yayınlanır:
@@ -64,6 +64,11 @@ ros2 launch rtabmap_launch rtabmap.launch.py \
   approx_sync:=true \
   qos_image:=2 \
   qos_camera_info:=2
+
+  veya
+
+  ros2 launch rtabmap_launch rtabmap.launch.py   rtabmap_args:="--delete_db_on_start"   rgb_topic:=/camera/camera/color/image_raw   depth_topic:=/camera/camera/depth/image_rect_raw   camera_info_topic:=/camera/camera/color/camera_info   approx_sync:=true   qos_image:=2   qos_camera_info:=2
+
 ```
 
 Parametreler:
