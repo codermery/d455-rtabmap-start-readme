@@ -22,7 +22,9 @@ Aşağıdaki komut ile D455 kamera sürücüsü çalıştırılır.
 `align_depth:=true` parametresi, depth verisini renkli görüntüyle hizalar.
 
 ```bash
-ros2 launch realsense2_camera rs_launch.py align_depth:=true camera_name:=d455
+ros2 launch realsense2_camera rs_launch.py camera_name:=d455
+veya
+ros2 launch realsense2_camera rs_d455_pointcloud_launch.py camera_name:=d455
 ```
 
 Bu komut ile aşağıdaki topic’ler yayınlanır:
